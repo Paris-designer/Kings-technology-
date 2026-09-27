@@ -1,6 +1,6 @@
 /* =========================================
-   KINGS TEC - MAIN WEBSITE STYLES
-   ========================================= */
+   KINGS TEC WEBSITE
+========================================= */
 
 * {
     margin: 0;
@@ -22,6 +22,7 @@ body {
 
 img {
     max-width: 100%;
+    display: block;
 }
 
 a {
@@ -37,12 +38,12 @@ a {
 
 
 /* =========================================
-   HEADER / NAVIGATION
-   ========================================= */
+   HEADER
+========================================= */
 
 .header {
     background: #071321;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -53,13 +54,11 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 25px;
 }
 
 .logo {
     font-size: 28px;
     font-weight: 800;
-    letter-spacing: -1px;
     white-space: nowrap;
 }
 
@@ -67,27 +66,40 @@ a {
     color: #36e6a0;
 }
 
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 18px;
 }
 
 .nav-menu a {
     color: #dbe7ef;
     font-size: 14px;
     font-weight: 600;
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
 .nav-menu a:hover {
     color: #36e6a0;
 }
 
+
+/* =========================================
+   MENU BUTTON
+========================================= */
+
 .menu-btn {
     display: none;
-    background: transparent;
+    width: 45px;
+    height: 45px;
     border: 0;
+    border-radius: 8px;
+    background: transparent;
     color: white;
     font-size: 30px;
     cursor: pointer;
@@ -95,49 +107,51 @@ a {
 
 
 /* =========================================
-   LANGUAGE SELECTOR
-   ========================================= */
+   LANGUAGE
+========================================= */
 
-.language-selector {
-    margin-left: 5px;
-    min-width: 120px;
+.language-box {
+    color: #36e6a0;
+    font-weight: 700;
+    min-width: 125px;
+}
+
+.language-box span {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 5px;
 }
 
 #google_translate_element {
-    color: #ffffff;
+    display: block;
 }
 
 .goog-te-gadget {
-    color: #ffffff !important;
-    font-size: 12px !important;
+    color: white !important;
+    font-size: 11px !important;
 }
 
 .goog-te-gadget select {
+    width: 125px;
+    padding: 7px 6px;
     background: #0d1d30 !important;
-    color: #ffffff !important;
-    border: 1px solid rgba(54, 230, 160, 0.35) !important;
-    border-radius: 8px !important;
-    padding: 7px 8px !important;
+    color: white !important;
+    border: 1px solid #36e6a0 !important;
+    border-radius: 7px;
     outline: none;
-    cursor: pointer;
-}
-
-.goog-te-gadget select option {
-    background: #0d1d30;
-    color: #ffffff;
 }
 
 
 /* =========================================
    HERO
-   ========================================= */
+========================================= */
 
 .hero {
     padding: 90px 0;
     background:
         radial-gradient(
             circle at top right,
-            rgba(54, 230, 160, 0.10),
+            rgba(54,230,160,0.10),
             transparent 35%
         ),
         #06101d;
@@ -148,10 +162,6 @@ a {
     grid-template-columns: 1.1fr 0.9fr;
     align-items: center;
     gap: 60px;
-}
-
-.hero-text {
-    min-width: 0;
 }
 
 .eyebrow {
@@ -181,39 +191,16 @@ a {
     margin-bottom: 32px;
 }
 
+
+/* =========================================
+   HERO BUTTONS
+========================================= */
+
 .hero-buttons {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
 }
-
-
-/* =========================================
-   HERO IMAGE
-   ========================================= */
-
-.hero-image {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-image img {
-    display: block;
-    width: 100%;
-    max-width: 450px;
-    height: auto;
-    object-fit: contain;
-    border-radius: 20px;
-    border: 1px solid rgba(54, 230, 160, 0.20);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
-}
-
-
-/* =========================================
-   BUTTONS
-   ========================================= */
 
 .btn {
     display: inline-flex;
@@ -224,8 +211,7 @@ a {
     border-radius: 10px;
     font-weight: 800;
     font-size: 15px;
-    transition: 0.3s ease;
-    cursor: pointer;
+    transition: 0.3s;
 }
 
 .primary-btn {
@@ -235,13 +221,12 @@ a {
 
 .primary-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(54, 230, 160, 0.20);
 }
 
 .secondary-btn {
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    background: rgba(255, 255, 255, 0.03);
-    color: #ffffff;
+    border: 1px solid rgba(255,255,255,0.16);
+    background: rgba(255,255,255,0.03);
+    color: white;
 }
 
 .secondary-btn:hover {
@@ -251,8 +236,30 @@ a {
 
 
 /* =========================================
+   HERO PHOTO
+========================================= */
+
+.hero-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 20px;
+    border: 1px solid rgba(54,230,160,0.20);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+
+
+/* =========================================
    SECTIONS
-   ========================================= */
+========================================= */
 
 .section {
     padding: 90px 0;
@@ -268,7 +275,7 @@ a {
 }
 
 .section-heading h2 {
-    font-size: clamp(32px, 5vw, 48px);
+    font-size: clamp(32px,5vw,48px);
     line-height: 1.15;
     margin-bottom: 15px;
 }
@@ -280,7 +287,7 @@ a {
 
 /* =========================================
    TWO COLUMN
-   ========================================= */
+========================================= */
 
 .two-column {
     display: grid;
@@ -290,7 +297,7 @@ a {
 }
 
 .two-column h2 {
-    font-size: clamp(32px, 5vw, 48px);
+    font-size: clamp(32px,5vw,48px);
     line-height: 1.15;
     margin-bottom: 20px;
 }
@@ -308,11 +315,11 @@ a {
 
 /* =========================================
    INFO CARD
-   ========================================= */
+========================================= */
 
 .info-card {
     background: #0d1d30;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255,255,255,0.08);
     border-radius: 20px;
     padding: 35px;
 }
@@ -342,26 +349,26 @@ a {
 
 
 /* =========================================
-   SERVICE CARDS
-   ========================================= */
+   SERVICES
+========================================= */
 
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
     gap: 25px;
 }
 
 .service-card {
     background: #0d1d30;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255,255,255,0.08);
     border-radius: 18px;
     padding: 30px;
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
 .service-card:hover {
     transform: translateY(-5px);
-    border-color: rgba(54, 230, 160, 0.45);
+    border-color: rgba(54,230,160,0.45);
 }
 
 .service-icon {
@@ -387,11 +394,11 @@ a {
 
 /* =========================================
    PROCESS
-   ========================================= */
+========================================= */
 
 .process-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
     gap: 25px;
 }
 
@@ -399,7 +406,7 @@ a {
     padding: 30px;
     background: #0d1d30;
     border-radius: 18px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255,255,255,0.08);
 }
 
 .process-card span {
@@ -422,18 +429,18 @@ a {
 
 /* =========================================
    PRICING
-   ========================================= */
+========================================= */
 
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
     gap: 25px;
 }
 
 .pricing-card {
     position: relative;
     background: #0d1d30;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255,255,255,0.08);
     border-radius: 20px;
     padding: 35px;
 }
@@ -480,7 +487,7 @@ a {
 .pricing-card li {
     padding: 9px 0;
     color: #c5d3dd;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 .pricing-card li::before {
@@ -492,7 +499,7 @@ a {
 
 /* =========================================
    CTA
-   ========================================= */
+========================================= */
 
 .cta-box {
     background: linear-gradient(
@@ -500,9 +507,11 @@ a {
         #0d1d30,
         #0a2730
     );
-    border: 1px solid rgba(54, 230, 160, 0.18);
+
+    border: 1px solid rgba(54,230,160,0.18);
     border-radius: 22px;
     padding: 45px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -510,7 +519,7 @@ a {
 }
 
 .cta-box h2 {
-    font-size: clamp(30px, 5vw, 45px);
+    font-size: clamp(30px,5vw,45px);
     line-height: 1.15;
     margin-bottom: 15px;
 }
@@ -522,7 +531,7 @@ a {
 
 /* =========================================
    FOOTER
-   ========================================= */
+========================================= */
 
 .footer {
     background: #040b14;
@@ -538,7 +547,6 @@ a {
 
 .footer h4 {
     margin-bottom: 15px;
-    font-size: 17px;
 }
 
 .footer p {
@@ -559,7 +567,7 @@ a {
 .footer-bottom {
     text-align: center;
     padding: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    border-top: 1px solid rgba(255,255,255,0.07);
 }
 
 .footer-bottom p {
@@ -569,31 +577,30 @@ a {
 
 
 /* =========================================
-   WHATSAPP BUTTON
-   ========================================= */
+   WHATSAPP
+========================================= */
 
 .whatsapp-btn {
     position: fixed;
     right: 20px;
     bottom: 20px;
     z-index: 999;
+
     background: #25d366;
-    color: #ffffff;
+    color: white;
+
     padding: 13px 20px;
     border-radius: 50px;
-    font-weight: 800;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-    transition: 0.3s ease;
-}
 
-.whatsapp-btn:hover {
-    transform: translateY(-3px);
+    font-weight: 800;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
 }
 
 
 /* =========================================
-   MOBILE MENU
-   ========================================= */
+   TABLET
+========================================= */
 
 @media (max-width: 950px) {
 
@@ -603,17 +610,26 @@ a {
 
     .nav-menu {
         position: absolute;
+
         top: 82px;
         left: 0;
         right: 0;
+
         width: 100%;
+
         background: #071321;
+
         padding: 20px;
+
         display: none;
+
         flex-direction: column;
+
         align-items: stretch;
+
         gap: 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+        border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
     .nav-menu.show {
@@ -622,12 +638,13 @@ a {
 
     .nav-menu a {
         padding: 13px 10px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+        border-bottom:
+            1px solid rgba(255,255,255,0.05);
     }
 
-    .language-selector {
+    .language-box {
         padding: 15px 10px 5px;
-        margin: 0;
     }
 
     .hero-content {
@@ -646,10 +663,6 @@ a {
 
     .hero-buttons {
         justify-content: center;
-    }
-
-    .hero-image {
-        width: 100%;
     }
 
     .hero-image img {
@@ -678,8 +691,8 @@ a {
 
 
 /* =========================================
-   SMALL MOBILE DEVICES
-   ========================================= */
+   MOBILE
+========================================= */
 
 @media (max-width: 650px) {
 
@@ -717,35 +730,31 @@ a {
         width: 100%;
     }
 
-    /*
-       IMPORTANT:
-       This prevents the founder image from
-       becoming extremely large on phones.
-    */
+
+    /* FIXED MOBILE PHOTO */
 
     .hero-image {
         width: 100%;
         margin-top: 15px;
+
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
     .hero-image img {
-        display: block;
         width: 100%;
         max-width: 380px;
         height: auto;
+
         object-fit: contain;
+
         border-radius: 18px;
     }
 
+
     .section {
         padding: 65px 0;
-    }
-
-    .section-heading {
-        margin-bottom: 30px;
     }
 
     .cards-grid,
@@ -756,10 +765,6 @@ a {
 
     .pricing-card.featured {
         transform: none;
-    }
-
-    .two-column {
-        gap: 35px;
     }
 
     .info-card,
@@ -789,12 +794,17 @@ a {
         font-size: 14px;
     }
 
+    .goog-te-gadget select {
+        width: 100%;
+        max-width: 250px;
+    }
+
 }
 
 
 /* =========================================
    VERY SMALL PHONES
-   ========================================= */
+========================================= */
 
 @media (max-width: 400px) {
 
@@ -808,11 +818,6 @@ a {
 
     .hero-image img {
         max-width: 340px;
-    }
-
-    .section-heading h2,
-    .two-column h2 {
-        font-size: 32px;
     }
 
 }
