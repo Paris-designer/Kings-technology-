@@ -1,41 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-    <loc>https://kingstec.org/</loc>
-  </url>
-
-  <url>
-    <loc>https://kingstec.org/about.html</loc>
-  </url>
-
-  <url>
-    <loc>https://kingstec.org/services.html</loc>
-  </url>
-
-  <url>
-    <loc>https://kingstec.org/pricing.html</loc>
-  </url>
-
-  <url>
-    <loc>https://kingstec.org/portfolio.html</loc>
-  </url>
-
-  <url>
-    <loc>https://kingstec.org/testimonials.html</loc>
-  </url>
-
-  <url>
-    <loc>https://kingstec.org/faq.html</loc>
-  </url>
-
-  <url>
-    <loc>https://kingstec.org/locations.html</loc>
-  </url>
-
-  <url>
-    <loc>https://kingstec.org/contact.html</loc>
-  </url>
-
+<url><loc>https://kingstec.org/</loc></url>
+<url><loc>https://kingstec.org/about.html</loc></url>
+<url><loc>https://kingstec.org/services.html</loc></url>
+<url><loc>https://kingstec.org/pricing.html</loc></url>
+<url><loc>https://kingstec.org/portfolio.html</loc></url>
+<url><loc>https://kingstec.org/testimonials.html</loc></url>
+<url><loc>https://kingstec.org/faq.html</loc></url>
+<url><loc>https://kingstec.org/locations.html</loc></url>
+<url><loc>https://kingstec.org/contact.html</loc></url>
 </urlset>
